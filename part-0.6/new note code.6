@@ -1,0 +1,41 @@
+new note code
+
+note over browser:
+user input the data in the text
+field and then press
+the save button in the spa page
+end note 
+
+browser->server:HTTP GET https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+note right of server:
+the post request to the address new_note_spa
+contains the new note as json-data
+containing both the content of the 
+note and the timestamp
+end note
+
+server-->browser:HTTP status code 201 created
+
+note left of browser:
+the browser stays on the same page and its sends
+no fruther HTTP request
+end note
+
+note right of server:
+the server does not ask for a redirect
+end note 
+
+note left of server:
+the command document.getElementofID
+instructs the code to fetch the from-element
+from the page and to register an event handler
+to handle the from submit event the event handler
+immediately calls the method 
+end note 
+
+note right of browser:
+then the event handler creates a new note 
+adds it to the notes list with the command 
+notes.push,rerenders thenote list on the page
+end note
